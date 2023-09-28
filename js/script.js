@@ -127,3 +127,7 @@ var $temp = $("<textarea>");
     document.execCommand("copy");
     $temp.remove();
 }
+$(function () {
+ thisyear = new Date().getFullYear();
+ $('#year').text(thisyear);
+});
