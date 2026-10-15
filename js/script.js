@@ -41,12 +41,12 @@ $(document).on('click', '.copy', function () {
 
     navigator.clipboard.writeText(tokenText)
         .then(() => {
-            $(this).text("Copié !").delay(2000).queue(function () {
-                $(this).text("Copier").dequeue();
+            $(this).text("Copied !").delay(2000).queue(function () {
+                $(this).text("Copy !").dequeue();
             });
         })
         .catch(err => {
-            console.error("Erreur :", err);
+            console.error("Error :", err);
         });
 });
 
