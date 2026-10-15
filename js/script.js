@@ -41,8 +41,8 @@ $(document).on('click', '.copy', function () {
 
     navigator.clipboard.writeText(tokenText)
         .then(() => {
-            $(this).text("Copied !").delay(2000).queue(function () {
-                $(this).text("Copy !").dequeue();
+            $(this).text("Copié !").delay(2000).queue(function () {
+                $(this).text("Copier !").dequeue();
             });
         })
         .catch(err => {
