@@ -1,3 +1,4 @@
+$(function () {
 /***********************************************/
 /* fonction de sanitize  */
 /***********************************************/
@@ -12,13 +13,13 @@ function sanitizeText(value) {
 }
 
 
-$(function () {
+
 $('#pdf').on('input', function () {
 $('#resultPdf').text(
 sanitizeText($(this).val())
 );
 });
-});
+
 //token block
 $('.token').wrap('<div class="token-block"></div>');   
 	$('.token-block').each(function(){     
@@ -47,4 +48,6 @@ $(document).on('click', '.copy', function () {
         .catch(err => {
             console.error("Erreur :", err);
         });
+});
+
 });
